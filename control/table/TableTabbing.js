@@ -4,7 +4,6 @@ sap.ui.define([], function() {
 	var TableTabbing = {
 
 		onTabPrevious: function(oEvent, that) {
-			//Focus on previous input
 			var aInputs = jQuery(oEvent.target).closest("tr").find("input");
 			var bFlag = false;
 			for (var i = 1; i < aInputs.length; i++) {
