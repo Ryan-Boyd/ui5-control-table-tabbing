@@ -1,4 +1,7 @@
 # ui5-control-table-tabbing
 Custom control for UI5 table tabbing
 
-To successfully add to project, rename all instances of "ProjectName" to your project resource root
+This enables user to tab through editable input elements inside table instead of using arrow keys.
+This control extends the sap.ui.table control
+
+To add to UI5 project, rename all instances of "ProjectName" to your project resource root
