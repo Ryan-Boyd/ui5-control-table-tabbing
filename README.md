@@ -5,3 +5,7 @@ This enables user to tab through editable input elements inside table instead of
 This control extends the sap.ui.table control
 
 To add to UI5 project, rename all instances of "ProjectName" to your project resource root
+
+Contributing
+
+Tabbing modification can be seen in TableTabbing.js and TableKeyboardDelegate.js
