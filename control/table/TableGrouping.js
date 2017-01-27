@@ -100,7 +100,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/model/Sorter'
 				return oTable._bShowGroupMenuButton;
 			}
 
-			if (Device.support.touch && TableGrouping.TableUtils.isInstanceOf(oTable, "sap/ui/table/AnalyticalTable")) {
+			if (Device.support.touch && TableGrouping.TableUtils.isInstanceOf(oTable, "ProjectName/control/table/AnalyticalTable")) {
 				oTable._bShowGroupMenuButton = true;
 			} else {
 				oTable._bShowGroupMenuButton = false;
@@ -151,13 +151,13 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Element', 'sap/ui/model/Sorter'
 		 * @private
 		 */
 		_calcGroupIndent : function(oTable, iLevel, bChildren) {
-			if (TableGrouping.TableUtils.isInstanceOf(oTable, "sap/ui/table/TreeTable")) {
+			if (TableGrouping.TableUtils.isInstanceOf(oTable, "ProjectName/control/table/TreeTable")) {
 				var iIndent = 0;
 				for (var i = 0; i < iLevel; i++) {
 					iIndent = iIndent + (i < 2 ? 12 : 8);
 				}
 				return iIndent;
-			} else if (TableGrouping.TableUtils.isInstanceOf(oTable, "sap/ui/table/AnalyticalTable")) {
+			} else if (TableGrouping.TableUtils.isInstanceOf(oTable, "ProjectName/control/table/AnalyticalTable")) {
 				var iIndent = 0;
 				iLevel = iLevel - 1;
 				iLevel = !bChildren ? iLevel - 1 : iLevel;

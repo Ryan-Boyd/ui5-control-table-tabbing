@@ -304,7 +304,7 @@ function(jQuery, Element, coreLibrary, Popup, RenderManager, Filter, FilterOpera
 		 * rerendered. This is a popup and we use the instance check because of the
 		 * menu behind the getMenu function is lazy created when first accessed.
 		 */
-		var ColumnMenu = sap.ui.require("sap/ui/table/ColumnMenu");
+		var ColumnMenu = sap.ui.require("ProjectName/control/table/ColumnMenu");
 		if (oOrigin !== this.getTemplate() && !(ColumnMenu && oOrigin instanceof ColumnMenu)) {
 			// changes on the template require to call invalidate on the column or table
 			Element.prototype.invalidate.apply(this, arguments);
@@ -449,7 +449,7 @@ function(jQuery, Element, coreLibrary, Popup, RenderManager, Filter, FilterOpera
 	 * @return {ProjectName.control.table.ColumnMenu} The created column menu.
 	 */
 	Column.prototype._createMenu = function() {
-		var ColumnMenu = sap.ui.requireSync("sap/ui/table/ColumnMenu");
+		var ColumnMenu = sap.ui.requireSync("ProjectName/control/table/ColumnMenu");
 
 		if (!this._defaultMenu) {
 			this._defaultMenu = new ColumnMenu(this.getId() + "-menu", {ariaLabelledBy: this});
@@ -524,7 +524,7 @@ function(jQuery, Element, coreLibrary, Popup, RenderManager, Filter, FilterOpera
 		this.setProperty("filterValue", sValue, true);
 		this._setAppDefault("filterValue", sValue);
 		var oMenu = this.getMenu();
-		var ColumnMenu = sap.ui.require("sap/ui/table/ColumnMenu");
+		var ColumnMenu = sap.ui.require("ProjectName/control/table/ColumnMenu");
 		if (oMenu && ColumnMenu && oMenu instanceof ColumnMenu) {
 			oMenu._setFilterValue(sValue);
 		}
@@ -786,7 +786,7 @@ function(jQuery, Element, coreLibrary, Popup, RenderManager, Filter, FilterOpera
 				this.setProperty("filtered", !!sValue, true);
 				this.setProperty("filterValue", sValue, true);
 				var oMenu = this.getMenu();
-				var ColumnMenu = sap.ui.require("sap/ui/table/ColumnMenu");
+				var ColumnMenu = sap.ui.require("ProjectName/control/table/ColumnMenu");
 				if (oMenu && ColumnMenu && oMenu instanceof ColumnMenu) {
 					// update column menu input field
 					oMenu._setFilterValue(sValue);

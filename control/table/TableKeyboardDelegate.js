@@ -519,12 +519,17 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/base/Object', './library', './Row', 
 				var bNoData = TableUtils.isNoDataVisible(this);
 
 				if (bContainsColHdrCnt && !bNoData) {
+					console.log("2nd");
 					var table = $("#"+ this.sId).find("input").first();
 					this._getKeyboardExtension()._setSilentFocus(jQuery(table));
 					//TableKeyboardDelegate._restoreFocusOnLastFocusedDataCell(this, oEvent);
 					oEvent.preventDefault();
 				} else if (oInfo.domRef === oEvent.target || (bNoData && bContainsColHdrCnt)) {
+					console.log("2nd");
 					//this._getKeyboardExtension()._setSilentFocus($this.find(".sapUiTableCtrlAfter"));
+				}
+				else {
+					TableTabbing.onTabNext(oEvent, this);   
 				}
 				if (oEvent.target === $("#"+this.sId).find("input").last()[0]){
 				    this._getKeyboardExtension()._setSilentFocus($this.find(".sapUiTableCtrlAfter"));

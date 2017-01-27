@@ -29,9 +29,9 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/base/Object', './TableUtils'],
 			this._settings = mSettings || {};
 
 			this._type = TableExtension.TABLETYPES.STANDARD;
-			if (TableUtils.isInstanceOf(oTable, "sap/ui/table/TreeTable")) {
+			if (TableUtils.isInstanceOf(oTable, "ProjectName/control/table/TreeTable")) {
 				this._type = TableExtension.TABLETYPES.TREE;
-			} else if (TableUtils.isInstanceOf(oTable, "sap/ui/table/AnalyticalTable")) {
+			} else if (TableUtils.isInstanceOf(oTable, "ProjectName/control/table/AnalyticalTable")) {
 				this._type = TableExtension.TABLETYPES.ANALYTICAL;
 			}
 
