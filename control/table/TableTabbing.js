@@ -1,10 +1,10 @@
 sap.ui.define([], function() {
 	"use strict";
-	
+
 	var TableTabbing = {
-		
+
 		sInput: "input:not([readonly='readonly'])",
-		
+
 		onTabPrevious: function(oEvent, that) {
 			var aInputs = jQuery(oEvent.target).closest("tr").find(this.sInput);
 			var bFlag = false;
@@ -58,7 +58,7 @@ sap.ui.define([], function() {
 				}
 				oEvent.preventDefault();
 			}
-			
+
 		}
 	};
 	return TableTabbing;
